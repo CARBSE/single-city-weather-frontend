@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Single City Weather Analysis</title>
+
+  <!-- Landing styles -->
+  <link rel="stylesheet" href="static/css/landing.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>Single-City Weather Analysis</h1>
+      <p class="lead">
+        Generate climate profiles and adaptive comfort charts for Indian cities.
+      </p>
+
+      <!-- How it works -->
+      <div class="how">
+        <div class="step">
+          <strong>1</strong>
+          <span>Select city & comfort model</span>
+        </div>
+        <div class="step">
+          <strong>2</strong>
+          <span>Run analysis</span>
+        </div>
+        <div class="step">
+          <strong>3</strong>
+          <span>Review & download outputs</span>
+        </div>
+      </div>
+
+      <!-- Visual / context -->
+      <div class="demo">
+        <div class="demo-meta">
+          <div><small>Tool overview</small></div>
+          <div class="muted">Climate • Comfort • Charts</div>
+        </div>
+
+        <img
+          src="static/images/india_map_preview.jpg"
+          alt="India climate map"
+          style="width:100%; border-radius:8px; margin-top:8px;"
+        />
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="startBtn" class="btn">Start</button>
+        <div id="warmMsg" class="warm">
+          Click Start to load the analysis engine
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Note: On first use, the analysis engine may take ~20–60 seconds to start.
+      </div>
+    </div>
+  </main>
+
+  <!-- Landing logic -->
+  <script src="static/js/landing.js"></script>
+</body>
+</html>
