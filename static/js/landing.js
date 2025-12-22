@@ -1,8 +1,3 @@
-/*************************************************
- * Single City Weather Tool – Landing Script
- * Reliable Render Free Version
- *************************************************/
-
 const BACKEND_URL = "https://single-city-weather-backend-1.onrender.com";
 
 const startBtn = document.getElementById("startBtn");
@@ -18,11 +13,11 @@ startBtn.addEventListener("click", () => {
   startBtn.disabled = true;
   warmMsg.textContent = "Waking the analysis engine…";
 
-  // Fire-and-forget request to wake backend
+  // Wake backend (fire-and-forget)
   fetch(`${BACKEND_URL}/health`, { mode: "no-cors" }).catch(() => {});
 
-  // Redirect after fixed delay (most reliable on Render Free)
+  // Redirect explicitly to tool UI
   setTimeout(() => {
-    window.location.href = BACKEND_URL;
-  }, 6000); // 6 seconds is enough to wake Render
+    window.location.href = `${BACKEND_URL}/`;
+  }, 6000);
 });
