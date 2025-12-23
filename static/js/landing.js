@@ -13,11 +13,11 @@ startBtn.addEventListener("click", () => {
   startBtn.disabled = true;
   warmMsg.textContent = "Waking the analysis engine…";
 
-  // Wake backend (fire-and-forget)
-  fetch(`${BACKEND_URL}/health`, { mode: "no-cors" }).catch(() => {});
+ if (response.ok) {
+  clearInterval(pollTimer);
+  warmMsg.textContent = "Server ready. You can start using the tool.";
+  startBtn.textContent = "Ready";
+  startBtn.disabled = true;
+}
 
-  // Redirect explicitly to tool UI
-  setTimeout(() => {
-    window.location.href = `${BACKEND_URL}/`;
-  }, 6000);
 });
